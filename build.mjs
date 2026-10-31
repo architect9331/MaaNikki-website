@@ -10,8 +10,9 @@ import { fileURLToPath } from "node:url";
 import { marked } from "marked";
 
 const directory = path.dirname(fileURLToPath(import.meta.url));
-const root = path.resolve(directory, "..");
-const output = path.join(root, ".build", "website");
+const root = directory;
+const source = path.resolve(process.env.MAANIKKI_SOURCE_DIR || path.join(root, ".upstream"));
+const output = path.join(root, "dist");
 const repo = "https://github.com/architect9331/MaaNikki";
 const escape = (value) =>
   String(value).replace(
@@ -104,13 +105,13 @@ await copyFile(
 );
 await copyFile(path.join(directory, "app.js"), path.join(output, "app.js"));
 await copyFile(
-  path.join(root, "resource", "icon.png"),
+  path.join(source, "resource", "icon.png"),
   path.join(output, "assets", "icon.png"),
 );
-for (const file of await readdir(path.join(root, "docs", "images"))) {
+for (const file of await readdir(path.join(source, "docs", "images"))) {
   if (/\.(png|webp|jpg|svg)$/i.test(file))
     await copyFile(
-      path.join(root, "docs", "images", file),
+      path.join(source, "docs", "images", file),
       path.join(output, "assets", file),
     );
 }
@@ -146,7 +147,7 @@ marked.use({
 });
 // The website supplies its own navigation; the Markdown source keeps its GitHub-friendly TOC.
 const manualSource = (
-  await readFile(path.join(root, "docs", "manual.md"), "utf8")
+  await readFile(path.join(source, "docs", "manual.md"), "utf8")
 ).replace(/^## 目录\r?\n[\s\S]*?(?=^## )/m, "");
 const content = marked.parse(manualSource);
 const shell = (title, description, url, body, manual = false) =>

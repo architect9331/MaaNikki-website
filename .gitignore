@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.upstream/
+.env
+.env.*
+*.log
