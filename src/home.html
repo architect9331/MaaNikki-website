@@ -1,0 +1,224 @@
+<main id="main">
+  <section class="hero" id="download" aria-labelledby="hero-title">
+    <div class="hero__sky" aria-hidden="true">
+      <span class="hero__twinkle" style="--x:7%;--y:14%;--s:12px;--d:0s"></span>
+      <span class="hero__twinkle" style="--x:21%;--y:6%;--s:7px;--d:1.1s"></span>
+      <span class="hero__twinkle" style="--x:38%;--y:18%;--s:9px;--d:2.3s"></span>
+      <span class="hero__twinkle" style="--x:49%;--y:7%;--s:6px;--d:.6s"></span>
+      <span class="hero__twinkle" style="--x:66%;--y:11%;--s:10px;--d:1.7s"></span>
+      <span class="hero__twinkle" style="--x:92%;--y:17%;--s:8px;--d:.3s"></span>
+    </div>
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="hero__eyebrow"><svg aria-hidden="true"><use href="#i-star"></use></svg>无限暖暖小助手</p>
+        <h1 id="hero-title"><em>奇迹大陆</em>这么大，<br>别只用来清日常。</h1>
+        <p class="hero__lead">图像识别，一键托管！朝夕心愿、星海拾光、幻境挑战通通安排，祝福闪光也帮你追全。你只管换上喜欢的衣服，出门走走~ ✨</p>
+        <div class="hero__actions">
+          <a class="btn btn--gold btn--lg" data-download href="{{DOWNLOAD_URL}}"><svg aria-hidden="true"><use href="#i-download"></use></svg>下载 Windows 版</a>
+          <a class="btn btn--glass btn--lg" href="#start">第一次用？看这里</a>
+        </div>
+        <p class="hero__meta"><strong data-release-version>{{VERSION}}</strong><span data-release-detail>{{SIZE}} · {{DATE}}</span><span>Windows 10 / 11 x64</span></p>
+        <p class="hero__os-note" data-os-note hidden>MaaNikki 目前只支持 Windows 版游戏，下载后请在 Windows 电脑上运行。</p>
+        <p class="hero__mirror">已有 Mirror酱 CDK？<a href="https://mirrorchyan.com/zh/projects?rid=MaaNikki&amp;source=maanikki_website" target="_blank" rel="noopener noreferrer">前往 Mirror酱高速下载</a></p>
+      </div>
+
+      <div class="stage" aria-hidden="true">
+        <svg class="stage__scene" viewBox="0 0 600 640" fill="none">
+          <defs>
+            <linearGradient id="archSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ec7f9f"/><stop offset=".55" stop-color="#f8b3a6"/><stop offset="1" stop-color="#ffe6c6"/></linearGradient>
+            <linearGradient id="brass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6dfae"/><stop offset="1" stop-color="#b98c4d"/></linearGradient>
+            <radialGradient id="dais" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff8ea" stop-opacity=".9"/><stop offset=".7" stop-color="#f4d9df" stop-opacity=".45"/><stop offset="1" stop-color="#f4d9df" stop-opacity="0"/></radialGradient>
+            <radialGradient id="halo" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff3df" stop-opacity=".75"/><stop offset="1" stop-color="#fff3df" stop-opacity="0"/></radialGradient>
+            <filter id="soft" x="-30%" y="-60%" width="160%" height="220%" filterUnits="objectBoundingBox"><feGaussianBlur stdDeviation="10"/></filter>
+          </defs>
+          <!-- A triptych of arched windows, after the shape language of the in-game fitting room -->
+          <path d="M122 524V222c0-104 80-182 178-182s178 78 178 182v302Z" fill="url(#archSky)"/>
+          <path d="M14 524V318c0-54 32-92 74-92 8 0 16 1 22 4v294Z" fill="url(#archSky)" opacity=".85"/>
+          <path d="M586 524V318c0-54-32-92-74-92-8 0-16 1-22 4v294Z" fill="url(#archSky)" opacity=".85"/>
+          <g fill="#fff6df"><circle cx="196" cy="150" r="1.8"/><circle cx="262" cy="92" r="1.3"/><circle cx="348" cy="84" r="1.6"/><circle cx="420" cy="146" r="1.3"/><circle cx="168" cy="236" r="1.2"/><circle cx="440" cy="240" r="1.5"/><circle cx="60" cy="282" r="1.3"/><circle cx="538" cy="296" r="1.4"/></g>
+          <!-- Clouds -->
+          <g filter="url(#soft)" fill="#fbe3ea"><ellipse cx="90" cy="452" rx="110" ry="42"/><ellipse cx="238" cy="470" rx="128" ry="42"/><ellipse cx="392" cy="462" rx="120" ry="44"/><ellipse cx="530" cy="478" rx="92" ry="36"/></g>
+          <g fill="#fff4f2" opacity=".92"><path d="M16 506c4-24 32-36 54-24 10-22 44-22 54 2 18-6 36 2 40 22H16Z"/><path d="M182 512c6-28 40-42 64-28 12-30 66-32 82 2 24-8 50 4 56 26H182Z"/><path d="M436 508c4-22 32-34 52-22 10-22 44-20 54 2 16-6 34 2 38 20H436Z"/></g>
+          <!-- Brass frames -->
+          <path d="M122 524V222c0-104 80-182 178-182s178 78 178 182v302" stroke="url(#brass)" stroke-width="4"/>
+          <path d="M134 524V224c0-96 74-170 166-170s166 74 166 170v300" stroke="url(#brass)" stroke-width="1" opacity=".75"/>
+          <path d="M14 524V318c0-54 32-92 74-92 8 0 16 1 22 4v294" stroke="url(#brass)" stroke-width="3"/>
+          <path d="M586 524V318c0-54-32-92-74-92-8 0-16 1-22 4v294" stroke="url(#brass)" stroke-width="3"/>
+          <g filter="url(#soft)" fill="#fbe6ec" opacity=".95"><ellipse cx="70" cy="520" rx="110" ry="24"/><ellipse cx="530" cy="520" rx="110" ry="24"/><ellipse cx="300" cy="524" rx="210" ry="20"/></g>
+          <!-- Round stage -->
+          <ellipse cx="300" cy="540" rx="284" ry="70" fill="url(#dais)"/>
+          <ellipse cx="300" cy="536" rx="232" ry="52" stroke="url(#brass)" stroke-width="2.5"/>
+          <ellipse cx="300" cy="536" rx="196" ry="41" stroke="url(#brass)" stroke-width="1" opacity=".7"/>
+          <ellipse cx="300" cy="536" rx="118" ry="23" fill="#fff" fill-opacity=".45"/>
+          <circle cx="300" cy="290" r="210" fill="url(#halo)"/>
+        </svg>
+        <img class="stage__icon" src="/assets/icon.png" alt="" width="300" height="300" fetchpriority="high">
+        <svg class="stage__spark stage__spark--a"><use href="#i-star"></use></svg>
+        <svg class="stage__spark stage__spark--b"><use href="#i-star"></use></svg>
+        <svg class="stage__spark stage__spark--c"><use href="#i-star"></use></svg>
+        <span class="petal petal--a"></span><span class="petal petal--b"></span><span class="petal petal--c"></span>
+      </div>
+    </div>
+    <div class="lace lace--hem" aria-hidden="true"></div>
+  </section>
+
+  <section class="daily wrap reveal" aria-labelledby="daily-title">
+    <header class="section-head">
+      <p class="kicker">日常托管</p>
+      <h2 id="daily-title">点下开始，<br>日常全包！</h2>
+    </header>
+    <div class="daily__body">
+      <figure class="shot">
+        <div class="shot__frame"><img src="/assets/overview-light.png" alt="MaaNikki 主界面：左侧是今天要跑的任务，右侧是连接设置和运行日志，右上角是收集进度与辅助开关" width="1379" height="889" loading="lazy"></div>
+      </figure>
+      <ul class="callouts">
+        <li><span class="callouts__n">1</span><div><h3>清单随你排</h3><p>「全套日常」开箱即用，也能新建配置页签，存下自己的任务组合。</p></div></li>
+        <li><span class="callouts__n">2</span><div><h3>周期任务不白跑</h3><p>周礼包、月兑换、巅峰赛完成后自动跳过，新周期到了自己恢复！</p></div></li>
+        <li><span class="callouts__n">3</span><div><h3>到点自动开工</h3><p>设好定时，从启动游戏到领完奖一条龙，起床就能收菜~</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="blessing" id="blessing" aria-labelledby="blessing-title">
+    <div class="wrap blessing__inner reveal">
+      <div class="blessing__copy">
+        <p class="kicker kicker--light">招牌功能</p>
+        <h2 id="blessing-title">祝福闪光，<br>一键全收集！</h2>
+        <p class="blessing__lead">按缺失颜色选本，自动刷取、升级、锁定五星满级新颜色。缺材料就存好进度收工，下次接着追，追色再也不用肝~ 🌈</p>
+        <ol class="flow">
+          <li><strong>读取仓库</strong><span>运行「全收集初始化」，把已有的满级颜色读一遍。</span></li>
+          <li><strong>开启全收集</strong><span>幻境挑战的「剩余活跃能量消耗方式」选「五星祝福闪光全收集」。</span></li>
+          <li><strong>坐等新颜色</strong><span>日常照跑，每轮新增的颜色都会写进日志。</span></li>
+        </ol>
+        <a class="link-arrow link-arrow--light" href="/manual/#祝福闪光全收集">看完整流程<svg aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+      </div>
+      <figure class="blessing__shot">
+        <div class="shot__frame shot__frame--glass"><img src="/assets/collection-progress.png" alt="祝福闪光收集进度页：按副本、套组和部位查看已收集的颜色" loading="lazy"></div>
+        <figcaption>哪个副本、哪个部位、还差哪个颜色，一眼看到。</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="features wrap reveal" id="features" aria-labelledby="features-title">
+    <header class="section-head">
+      <p class="kicker">核心模块</p>
+      <h2 id="features-title">能代劳的，都安排上了！</h2>
+    </header>
+    <div class="tags">
+      <article class="tag tag--wide">
+        <p class="tag__name">日常自动化</p>
+        <h3>再也不会忘领了！</h3>
+        <p>朝夕心愿、星海拾光自动补足 500 分再领奖；美鸭梨挖掘、家园日常、奇迹之旅、邮箱附件顺手清空。小游戏和做衣服？那还得你亲自来~ ✅</p>
+      </article>
+      <article class="tag">
+        <p class="tag__name">幻境挑战</p>
+        <h3>活跃能量，一滴不剩！</h3>
+        <p>每周幻境优先安排，剩下的任你花：素材激化、祝福闪光、魔物试炼随便选，材料还能按优先级自动挑。⚔️</p>
+      </article>
+      <article class="tag">
+        <p class="tag__name">商城与巅峰赛</p>
+        <h3>白给的绝不能漏！</h3>
+        <p>免费礼包每周领，五抽兑换每月换；巅峰赛用推荐搭配冲到目标星数，嘉奖领完，晶石兑换也能安排。🎁</p>
+      </article>
+      <article class="tag">
+        <p class="tag__name">星光结晶</p>
+        <h3>跑图挂机两不误！</h3>
+        <p>自动摇铃、定位结晶、选好路线就开跑，卡住就传回起点重来，跑完汇报今日收成。🌟</p>
+      </article>
+      <article class="tag">
+        <p class="tag__name">钓鱼</p>
+        <h3>鱼竿，交给它！</h3>
+        <p>当前点钓鱼站定开竿，路线钓鱼自动跑钓点，这里钓光就去下一处，还能提前打窝。🎣</p>
+      </article>
+      <article class="tag tag--wide tag--assist">
+        <div>
+          <p class="tag__name">探索辅助</p>
+          <h3>边玩边省心！</h3>
+          <p>自动拾取、对白推进、清洁动画跳过，抛竿后还能自动收线；美鸭梨里没收集的奇想星和灵感露珠，直接标上地图。右上角一键启停，跑日常时自动让路~ 🧭</p>
+        </div>
+        <img src="/assets/assist-settings.png" alt="辅助功能设置页" loading="lazy">
+      </article>
+      <article class="tag">
+        <p class="tag__name">共鸣记录</p>
+        <h3>每一抽都记着！</h3>
+        <p>登录美鸭梨自动同步，逐条历史和套装收藏长期保存，还能导出 JSON。📖</p>
+      </article>
+      <article class="tag">
+        <p class="tag__name">多账号存档</p>
+        <h3>大小号互不打扰！</h3>
+        <p>自动识别 UID，周期状态和收藏进度各记各的，切号也接得上。👯</p>
+      </article>
+      <article class="tag">
+        <p class="tag__name">自动更新</p>
+        <h3>新版本自己送上门！</h3>
+        <p>后台下载增量包，空闲时装好重启；有 Mirror酱 CDK 还能走高速线路。🚀</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="loop wrap reveal" aria-labelledby="loop-title">
+    <div>
+      <p class="kicker">原理</p>
+      <h2 id="loop-title">看懂画面，再动手。</h2>
+      <p class="loop__text">MaaNikki 基于 MaaFramework 的图像识别，就像有人替你盯着屏幕点按。任务中断能接续，失败现场自动留下截图和日志，排查起来也不头疼。</p>
+    </div>
+    <ol class="loop__steps" aria-label="工作流程"><li>截图</li><li>识别</li><li>决策</li><li>执行</li></ol>
+  </section>
+
+  <section class="start" id="start" aria-labelledby="start-title">
+    <div class="wrap reveal">
+      <header class="section-head section-head--center">
+        <p class="kicker">第一次用</p>
+        <h2 id="start-title">三步开跑！</h2>
+      </header>
+      <ol class="steps">
+        <li><span class="steps__n">i.</span><h3>解压，打开</h3><p>把运行包完整解压到一个文件夹，打开 <code>MaaNikki.exe</code>。</p></li>
+        <li><span class="steps__n">ii.</span><h3>把游戏调成 16:9</h3><p>推荐 1920×1080，再到软件里对一下按键。</p></li>
+        <li><span class="steps__n">iii.</span><h3>选「全套日常」，开始</h3><p>去掉还没解锁的内容，点开始，然后让游戏留在前台。</p></li>
+      </ol>
+      <div class="faq">
+        <details><summary>支持哪些平台？</summary><p>目前只支持 Windows 10 / 11 x64 的 PC 客户端。地图标记和共鸣记录使用美鸭梨国服账号。</p></details>
+        <details><summary>能一边跑一边用电脑吗？</summary><p>跑路线要占用前台输入，切走游戏会暂停，切回来继续。所以跑日常时最好让电脑歇一会儿。探索辅助里的部分功能可以在后台运行，详见手册。</p></details>
+        <details><summary>提示截图尺寸不符怎么办？</summary><p>游戏实际画面要是 16:9。最大化窗口后比例可能会变，核对一下再重新运行。</p></details>
+        <details><summary>全收集会不会把我想留的吃掉？</summary><p>没锁定的会被用掉：升级时一键放入五星及以下素材，刷完还会分解四星及以下的闪光。想留的请先锁上。</p></details>
+        <details><summary>出问题了找谁？</summary><p>在软件里「导出日志」，说说什么时候、在做什么，发到 QQ 群或 GitHub Issue。</p></details>
+      </div>
+      <p class="start__more"><a class="link-arrow" href="/manual/">打开完整用户手册<svg aria-hidden="true"><use href="#i-arrow"></use></svg></a></p>
+    </div>
+  </section>
+
+  <section class="news wrap reveal" aria-labelledby="news-title">
+    <div class="news__head">
+      <p class="kicker">最近更新</p>
+      <h2 id="news-title"><a data-release-link href="{{RELEASE_URL}}"><span data-release-version>{{VERSION}}</span></a></h2>
+      <p class="news__date" data-release-date>{{DATE}}</p>
+      <a class="link-arrow" href="https://github.com/architect9331/MaaNikki/releases">全部版本<svg aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+    </div>
+    <div class="news__body prose">{{RELEASE_NOTES}}</div>
+  </section>
+
+  <section class="community" id="community" aria-labelledby="community-title">
+    <div class="wrap reveal">
+      <h2 id="community-title">一起把小助手养大！</h2>
+      <p class="community__lead">用得顺手就点个 Star，遇到问题来群里喊一声，想改代码也随时欢迎~</p>
+      <div class="community__cards">
+        <button class="contact" type="button" data-copy="654174255">
+          <svg aria-hidden="true"><use href="#i-chat"></use></svg>
+          <span class="contact__text"><strong>QQ 交流群</strong><span>654174255</span></span>
+          <span class="contact__hint"><svg aria-hidden="true"><use href="#i-copy"></use></svg><span data-copy-label>复制群号</span></span>
+        </button>
+        <a class="contact" href="https://github.com/architect9331/MaaNikki" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true"><use href="#i-github"></use></svg>
+          <span class="contact__text"><strong>GitHub</strong><span>看源码 · 点个 Star<span data-stars></span></span></span>
+          <span class="contact__hint"><svg aria-hidden="true"><use href="#i-arrow"></use></svg></span>
+        </a>
+        <a class="contact" href="https://github.com/architect9331/MaaNikki/issues" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true"><use href="#i-bug"></use></svg>
+          <span class="contact__text"><strong>问题反馈</strong><span>提个 Issue</span></span>
+          <span class="contact__hint"><svg aria-hidden="true"><use href="#i-arrow"></use></svg></span>
+        </a>
+      </div>
+      <p class="community__credit">Powered by <a href="https://github.com/MaaXYZ/MaaFramework">MaaFramework</a> &amp; <a href="https://github.com/MistEO/MXU">MXU</a> · 部分基础功能参考 <a href="https://github.com/nikkigallery/Whimbox">Whimbox（奇想盒）</a></p>
+    </div>
+  </section>
+</main>

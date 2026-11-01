@@ -6,6 +6,8 @@
     "build": "node build.mjs"
   },
   "dependencies": {
+    "@fontsource/cormorant-garamond": "5.3.0",
+    "@fontsource/noto-serif-sc": "5.3.1",
     "marked": "17.0.1"
   }
 }

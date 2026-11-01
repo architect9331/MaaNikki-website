@@ -9,7 +9,7 @@ npm run build
 python -m http.server 4173 --directory dist
 ```
 
-使用 `.node-version` 指定的 Node.js 版本。构建输出在 `dist/`。`index.html`、`styles.css` 与 `app.js` 维护主页；用户手册从软件仓库的 `docs/manual.md` 生成，界面截图沿用 `docs/images/`，图标沿用 `resource/icon.png`。可设置 `MAANIKKI_SOURCE_DIR` 指向软件仓库，或将其克隆到本目录的 `.upstream/`。
+使用 `.node-version` 指定的 Node.js 版本。构建输出在 `dist/`。`src/` 维护主页（`home.html`、`styles.css`、`app.js`、`icons.svg`），`build.mjs` 组装页面；标题字体由 `@fontsource` 自托管，按需加载；用户手册从软件仓库的 `docs/manual.md` 生成，界面截图沿用 `docs/images/`，图标沿用 `resource/icon.png`。可设置 `MAANIKKI_SOURCE_DIR` 指向软件仓库，或将其克隆到本目录的 `.upstream/`。
 
 推送官网改动会自动部署。软件仓库更新手册、截图、图标，或软件构建完成后，通过仅限本仓库的部署密钥更新 `upstream.json`，触发官网部署。该文件记录软件提交和发行版，构建按提交读取手册与素材。可手动运行软件仓库的 `Sync website` 或本仓库的 `Deploy website`。
 
