@@ -4,12 +4,23 @@ const root = document.documentElement;
 const themeButton = document.querySelector("[data-theme-toggle]");
 const systemDark = matchMedia("(prefers-color-scheme: dark)");
 const currentTheme = () => root.dataset.theme || (systemDark.matches ? "dark" : "light");
-const syncThemeButton = () => {
-  if (!themeButton) return;
+const previewImage = document.querySelector("[data-preview-image]");
+const previewTabs = [...document.querySelectorAll(".shot__tab")];
+const syncPreviewImage = () => {
+  const active = previewTabs.find((tab) => tab.classList.contains("is-active"));
+  if (!active || !previewImage) return;
   const dark = currentTheme() === "dark";
-  themeButton.setAttribute("aria-pressed", String(dark));
-  themeButton.setAttribute("aria-label", dark ? "切换浅色模式" : "切换深色模式");
-  themeButton.querySelector("use")?.setAttribute("href", dark ? "#i-sun" : "#i-moon");
+  const nextSrc = (dark && active.dataset.previewDarkSrc) || active.dataset.previewSrc;
+  if (nextSrc && previewImage.getAttribute("src") !== nextSrc) previewImage.src = nextSrc;
+};
+const syncThemeButton = () => {
+  if (themeButton) {
+    const dark = currentTheme() === "dark";
+    themeButton.setAttribute("aria-pressed", String(dark));
+    themeButton.setAttribute("aria-label", dark ? "切换浅色模式" : "切换深色模式");
+    themeButton.querySelector("use")?.setAttribute("href", dark ? "#i-sun" : "#i-moon");
+  }
+  syncPreviewImage();
 };
 themeButton?.addEventListener("click", () => {
   root.dataset.theme = currentTheme() === "dark" ? "light" : "dark";
@@ -22,6 +33,18 @@ themeButton?.addEventListener("click", () => {
 });
 systemDark.addEventListener("change", syncThemeButton);
 syncThemeButton();
+
+previewTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    previewTabs.forEach((item) => {
+      const selected = item === tab;
+      item.classList.toggle("is-active", selected);
+      item.setAttribute("aria-selected", String(selected));
+    });
+    if (previewImage && tab.dataset.previewAlt) previewImage.alt = tab.dataset.previewAlt;
+    syncPreviewImage();
+  });
+});
 
 // ---- Download: the build snapshot is the fallback; GitHub gives the freshest release
 const applyRelease = (release) => {

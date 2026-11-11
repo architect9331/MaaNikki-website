@@ -32,6 +32,7 @@ jobs:
             docs/manual.md
             docs/images
             resource/icon.png
+            resource/data/blessing_catalog.json
           sparse-checkout-cone-mode: false
           persist-credentials: false
       - uses: actions/setup-node@v4
