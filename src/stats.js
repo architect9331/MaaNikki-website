@@ -261,7 +261,7 @@ function renderColorRates(model) {
   }).join("");
 }
 
-function renderSlotsAndBling(summary, model) {
+function renderSlots(summary, model) {
   const slotsEl = root.querySelector("[data-stats-slots]");
   const slots = summary.slots ?? [];
   const slotColors = { 头部: "pink", 手部: "lavender", 脚部: "mint" };
@@ -289,29 +289,6 @@ function renderSlotsAndBling(summary, model) {
     `;
   } else {
     slotsEl.innerHTML = `<p class="stats-empty-inline">暂无分部位统计记录。</p>`;
-  }
-
-  const blingEl = root.querySelector("[data-stats-bling]");
-  const bling = summary.bling;
-  if (bling?.energy > 0) {
-    const perEnergy = Math.round(bling.gain / bling.energy);
-    const energyPerMaxEureka = perEnergy > 0 ? Math.round(72000 / perEnergy) : 36;
-    blingEl.innerHTML = `
-      <div class="bling-highlight">
-        <div>
-          <span class="bling-label">每点活跃能量平均产出</span>
-          <strong class="bling-value">${fmtInt(perEnergy)} <small>噗灵</small></strong>
-        </div>
-        <span class="bling-pill">满级 1 件约需 ${fmtInt(energyPerMaxEureka)} 能量</span>
-      </div>
-      <div class="slot-legend">
-        <div class="slot-legend-item"><span>累计记录趟数</span><strong>${fmtInt(bling.runs)} 次</strong></div>
-        <div class="slot-legend-item"><span>累计投入活跃能量</span><strong>${fmtInt(bling.energy)} 点</strong></div>
-        <div class="slot-legend-item"><span>累计刷取噗灵</span><strong>${fmtInt(bling.gain)} 噗灵</strong></div>
-      </div>
-    `;
-  } else {
-    blingEl.innerHTML = `<p class="stats-empty-inline">等待刷噗灵样本累计中…</p>`;
   }
 }
 
@@ -488,7 +465,7 @@ function renderAll(summary) {
   root.querySelector("[data-stats-main]").hidden = false;
   renderKpis(summary, model);
   renderColorRates(model);
-  renderSlotsAndBling(summary, model);
+  renderSlots(summary, model);
   renderSets(model);
   renderCommunity(summary);
 }

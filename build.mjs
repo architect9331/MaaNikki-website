@@ -215,7 +215,7 @@ await writeFile(
   path.join(output, "stats", "index.html"),
   shell(
     "数据统计 · MaaNikki",
-    "MaaNikki 社区匿名实测统计：五星祝福闪光炫彩与各色条件出率、28 套副本明细、刷噗灵产出与日常偏好。",
+    "MaaNikki 社区匿名实测统计：五星祝福闪光炫彩与各色条件出率、28 套副本明细与搭配师日常偏好。",
     "/stats/",
     `<section class="stats-banner" aria-labelledby="stats-title">
       <div class="hero__sky" aria-hidden="true">
@@ -228,7 +228,7 @@ await writeFile(
         <div>
           <p class="hero__eyebrow"><svg aria-hidden="true"><use href="#i-star"></use></svg>企鹅物流式匿名汇总</p>
           <h1 id="stats-title">奇迹大陆 · <em>闪光与日常统计</em></h1>
-          <p class="stats-banner__lead">汇总 MaaNikki 搭配师在日常运行中匿名贡献的五星满级变色、幻境刷噗灵与任务偏好数据。浏览器每次打开实时拉取最新样本。</p>
+          <p class="stats-banner__lead">汇总 MaaNikki 搭配师在日常运行中匿名贡献的五星满级变色、美鸭梨挖掘与日常任务偏好数据。浏览器每次打开实时拉取最新样本。</p>
         </div>
         <p class="stats-status-pill" data-stats-status role="status">正在同步实时样本…</p>
       </div>
@@ -256,20 +256,16 @@ await writeFile(
           <div class="stats-color-rows" data-stats-colors></div>
         </div>
 
-        <div class="stats-duo-grid">
-          <article class="stats-card stats-card--tag" data-stats-slots-card>
-            <p class="kicker">部位分布</p>
-            <h3>三部位升满样本分布</h3>
-            <p class="stats-card-sub">全收集按缺色期望排定升级优先级，样本覆盖头部、手部与脚部。</p>
-            <div data-stats-slots></div>
-          </article>
-          <article class="stats-card stats-card--tag" data-stats-bling-card>
-            <p class="kicker">素材激化</p>
-            <h3>刷噗灵实测产出</h3>
-            <p class="stats-card-sub">记录幻境刷取噗灵时的活跃能量消耗与实际产出比。</p>
-            <div data-stats-bling></div>
-          </article>
-        </div>
+        <article class="stats-card stats-card--tag stats-slots-card" data-stats-slots-card>
+          <div class="stats-slots-head">
+            <div>
+              <p class="kicker">部位分布</p>
+              <h3>三部位升满样本分布</h3>
+            </div>
+            <p class="stats-slots-sub">全收集按缺色期望排定升级优先级，样本均匀覆盖头部、手部与脚部。</p>
+          </div>
+          <div data-stats-slots></div>
+        </article>
       </section>
 
       <section class="stats-section" data-stats-sets-section hidden aria-labelledby="sets-title">
@@ -313,7 +309,7 @@ await writeFile(
       <section class="stats-privacy" aria-labelledby="privacy-title">
         <h3 id="privacy-title">关于统计方法与隐私保护</h3>
         <p>本页并非游戏官方公布概率。置信区间采用 <strong>95% Wilson 区间</strong>，在小样本与低概率场景下依然稳健，查看单套组或单颜色时请结合区间宽度参考。</p>
-        <p>参考企鹅物流的匿名汇总设计，客户端仅使用服务端首次随机生成的匿名统计 ID（与游戏 UID、账号及硬件无关，请求 IP 不落盘），只上报闪光套组部位与颜色、刷噗灵能量与产出、挖掘材料名及任务开关偏好。你随时可以在软件「<strong>设置 → 通用 → 帮助改进软件</strong>」中独立关闭任意统计项。</p>
+        <p>参考企鹅物流的匿名汇总设计，客户端仅使用服务端首次随机生成的匿名统计 ID（与游戏 UID、账号及硬件无关，请求 IP 不落盘），只汇总匿名结果计数与功能开关偏好，不包含任何个人身份信息。你随时可以在软件「<strong>设置 → 通用 → 帮助改进软件</strong>」中独立关闭任意统计项。</p>
       </section>
     </main>${catalogScript}<script type="module" src="/stats.js"></script>`,
     "stats",
